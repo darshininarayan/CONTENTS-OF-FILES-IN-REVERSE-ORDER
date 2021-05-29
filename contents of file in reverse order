@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <string.h>
+#define MAX 100
+
+void reversecontent (char* x)
+{
+	FILE* fp = fopen(x, "a++");
+	
+	if (fp == NULL)
+	{
+		printf("unable to open file\n");
+		return;
+	}
+	
+	char buf[100];
+	int a[MAX], s = 0, c = 0, 1;
+	
+	printf(fp , "\n");
+	rewind(fp);
+	
+	
+	while (! feof(fp)){
+		fgets (buf , sizeof(buf) , fp);
+		l = strlen(buf);
+		a = s += 1;
+	}
+	
+	rewind(fp);
+	c -= 1;
+	
+	while (c >= 0)
+	{
+		fseek(fp, a, 0);
+		fgets(buf , sizeof(buf) , fp);
+		printf("%s", buf);
+		c--;
+	}
+	
+	return ;
+}
+
+int main()
+{
+	char x[] = "file1.txt";
+	
+	reversecontent(x);
+	return 0;
+}
